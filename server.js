@@ -33,9 +33,9 @@ app.use('/', htmlroutes);
 app.use('/api', apiroutes);
 app.use('/merch', merchroutes);
 
- app.listen(process.env.port || 8080, function(){
-    console.log("server running")
-})
+app.listen(process.env.PORT || 8080, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
 
 
 
